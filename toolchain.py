@@ -26,7 +26,7 @@ from constructs import Construct
 import constants
 from backend.component import Backend
 
-GITHUB_CONNECTION_ARN = "CONNECTION_ARN"
+GITHUB_CONNECTION_ARN = "arn:aws:codestar-connections:us-east-1:151535391272:connection/c26efc26-c3d1-4dd2-8c7a-4cc91db35ab1"
 GITHUB_OWNER = "edumueller"
 GITHUB_REPO = "aws-cdk-python"
 GITHUB_TRUNK_BRANCH = "main"
