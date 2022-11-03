@@ -87,7 +87,6 @@ class Toolchain(cdk.Stack):
             production,
             constants.APP_NAME + PRODUCTION_ENV_NAME,
             stack_name=constants.APP_NAME + PRODUCTION_ENV_NAME,
-            api_lambda_reserved_concurrency=10,
             database_dynamodb_billing_mode=dynamodb.BillingMode.PROVISIONED,
         )
         api_endpoint_env_var_name = constants.APP_NAME.upper() + "_API_ENDPOINT"

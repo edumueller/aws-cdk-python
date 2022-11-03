@@ -31,7 +31,6 @@ class Backend(cdk.Stack):
         id_: str,
         *,
         database_dynamodb_billing_mode: dynamodb.BillingMode,
-        api_lambda_reserved_concurrency: int,
         **kwargs: Any,
     ):
         super().__init__(scope, id_, **kwargs)
@@ -45,7 +44,6 @@ class Backend(cdk.Stack):
             self,
             "API",
             dynamodb_table_name=database.dynamodb_table.table_name,
-            lambda_reserved_concurrency=api_lambda_reserved_concurrency,
         )
         Monitoring(self, "Monitoring", database=database, api=api)
 

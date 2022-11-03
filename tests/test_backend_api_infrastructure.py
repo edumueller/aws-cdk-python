@@ -35,7 +35,6 @@ class APITestCase(unittest.TestCase):
             stack,
             "API",
             dynamodb_table_name=database.dynamodb_table.table_name,
-            lambda_reserved_concurrency=1,
         )
         template = assertions.Template.from_stack(stack).to_json()
         lambda_function_code_property = template["Resources"][
